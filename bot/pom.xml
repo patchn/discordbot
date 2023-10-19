@@ -21,7 +21,29 @@
         </dependency>
     </dependencies>
 
-    <jar>
-        
-    </jar>
+    <build>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>appassembler-maven-plugin</artifactId>
+            <version>2.1.0</version>
+            <configuration>
+                <assembleDirectory>target</assembleDirectory>
+                <programs>
+                <program>
+                    <mainClass>bot.discordBot</mainClass>
+                    <name>bot</name>
+                </program>
+                </programs>
+            </configuration>
+            <executions>
+                <execution>
+                <phase>package</phase>
+                <goals>
+                    <goal>assemble</goal>
+                </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </build>
+    
 </project>
