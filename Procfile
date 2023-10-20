@@ -1,0 +1,1 @@
+web: cd bot && mvn clean install && mvn exec:java
